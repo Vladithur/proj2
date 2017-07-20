@@ -134,7 +134,7 @@ public class SingleLetterDisplay extends Application {
     }
 
     /** Makes the text bounding box change color periodically. */
-    public void makeRectangleColorChange() {
+    private void makeRectangleColorChange() {
         // Create a Timeline that will call the "handle" function of RectangleBlinkEventHandler
         // every 1 second.
         final Timeline timeline = new Timeline();
