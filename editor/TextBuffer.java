@@ -3,18 +3,17 @@ package editor;
 import javafx.scene.text.Text;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class TextBuffer {
     private LinkedList<Text> text = new LinkedList<>();
     private int current_pos = 0;
 
-    public TextBuffer() {
+    TextBuffer() {
 
     }
 
-    public void addLetter (Text t) {
+    void addLetter(Text t) {
         if (text.size() == 0) text.add(t);
         else {
             current_pos++;
@@ -22,7 +21,7 @@ public class TextBuffer {
         }
     }
 
-    public void removeLetter() {
+    void removeLetter() {
         if (text.size() == 0) System.out.println("No text!");
         else if (text.size() == 1) text.remove();
         else {
@@ -31,7 +30,7 @@ public class TextBuffer {
         }
     }
 
-    public Text getLetter() {
+    Text getLetter() {
         return text.get(current_pos);
     }
 
@@ -47,11 +46,11 @@ public class TextBuffer {
         current_pos = i;
     }
 
-    public int getCurrentPos() {
+    int getCurrentPos() {
         return current_pos;
     }
 
-    public int size() {
+    int size() {
         return text.size();
     }
 

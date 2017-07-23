@@ -15,7 +15,7 @@ public class Cursor {
         cursor = new Rectangle(0, 0, 3, 15);
     }
 
-    public void setHeightAndWidth(double w, double h) {
+    void setHeightAndWidth(double w, double h) {
         cursor.setWidth(w);
         cursor.setHeight(h);
     }
@@ -24,7 +24,7 @@ public class Cursor {
         return cursor.getX();
     }
 
-    public void setX(double x) {
+    void setX(double x) {
         cursor.setX(x);
     }
 
@@ -32,7 +32,7 @@ public class Cursor {
         return cursor.getY();
     }
 
-    public void setY(double y) {
+    void setY(double y) {
         cursor.setY(y);
     }
 
@@ -44,21 +44,21 @@ public class Cursor {
         return cursor.getHeight();
     }
 
-    public Rectangle getCursor() {
+    Rectangle getCursor() {
         return cursor;
     }
 
     /**
      * Makes the text bounding box change color periodically.
      */
-    public void makeRectangleColorChange() {
+    void makeRectangleColorChange() {
         // Create a Timeline that will call the "handle" function of RectangleBlinkEventHandler
         // every 1 second.
         final Timeline timeline = new Timeline();
         // The rectangle should continue blinking forever.
         timeline.setCycleCount(Timeline.INDEFINITE);
         RectangleBlinkEventHandler cursorChange = new RectangleBlinkEventHandler();
-        KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.5), cursorChange);
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(0.55), cursorChange);
         timeline.getKeyFrames().add(keyFrame);
         timeline.play();
     }

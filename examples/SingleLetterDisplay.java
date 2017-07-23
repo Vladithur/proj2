@@ -15,8 +15,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import javax.swing.*;
-
 /**
  * A JavaFX application that displays the letter the user has typed most recently, with a box
  * around it.  The box changes color every second, and the user can change the size of the letter

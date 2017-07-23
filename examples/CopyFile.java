@@ -39,7 +39,7 @@ public class CopyFile {
             // already in outputFilename.
             FileWriter writer = new FileWriter(outputFilename);
 
-            int intRead = -1;
+            int intRead;
             // Keep reading from the file input read() returns -1, which means the end of the file
             // was reached.
             while ((intRead = bufferedReader.read()) != -1) {
