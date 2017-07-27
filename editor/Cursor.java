@@ -81,6 +81,7 @@ public class Cursor {
         @Override
         public void handle(ActionEvent event) {
             changeColor();
+            Editor.updateCursor();
         }
     }
 }

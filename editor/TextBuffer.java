@@ -42,12 +42,12 @@ public class TextBuffer {
         return text;
     }
 
-    public void setCurrentPos(int i) {
-        current_pos = i;
-    }
-
     int getCurrentPos() {
         return current_pos;
+    }
+
+    public void setCurrentPos(int i) {
+        current_pos = i;
     }
 
     int size() {
